@@ -1,0 +1,22 @@
+Package: pretrel
+Title: Predicting Ethnicity and Relatedness from Genotyping Data
+Version: 0.1
+Authors@R: 
+    person(given = "Salih",
+           family = "Tuna",
+           role = c("aut", "cre"),
+           email = "salihtuna@gmail.com")
+Description: Genomic ethnicity and relatedness prediction from genotyping data. Pretrel starts with selecting SNPs from the data set, that will be used for this analysis and then merge the filtered data with reference set (currently works with 1000 Genome data only). Next step is to run the GENESIS package for ethnicity and relatedness prediction. Once the pairwise relatedness is obtained for all all possible pairs, PRIMUS is called to get the list of maximum unrelated samples.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 3.3.0)
+Imports:
+    GENESIS,
+    GWASTools,
+    SNPRelate,
+    gdsfmt,
+    ggplot2,
+    methods
+RoxygenNote: 6.1.1
